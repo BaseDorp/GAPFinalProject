@@ -2,20 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class CubeMeshData
+public class CubeMeshData : MonoBehaviour
 {
-    public static Vector3[] vertices = {
-        new Vector3(1,1,1),
-        new Vector3(-1,1,1),
-        new Vector3(-1,-1,1),
-        new Vector3(1,-1,1),
-        new Vector3(-1,1,-1),
-        new Vector3(1,1,-1),
-        new Vector3(1,-1,-1),
-        new Vector3(-1,-1,-1),
-    };
+    public float height = 1;
+    Vector3[] vertices;
 
-    public static int[][] faceTriangles =
+    public CubeMeshData()
+    {
+        vertices = new Vector3[]{
+            new Vector3(1, height, 1),
+            new Vector3(-1, height, 1),
+            new Vector3(-1, -1, 1),
+            new Vector3(1, -1, 1),
+            new Vector3(-1, height, -1),
+            new Vector3(1, height, -1),
+            new Vector3(1, -1, -1),
+            new Vector3(-1, -1, -1)};
+    }
+
+    private void Update()
+    {
+        vertices = new Vector3[]{
+            new Vector3(1, height, 1),
+            new Vector3(-1, height, 1),
+            new Vector3(-1, -1, 1),
+            new Vector3(1, -1, 1),
+            new Vector3(-1, height, -1),
+            new Vector3(1, height, -1),
+            new Vector3(1, -1, -1),
+            new Vector3(-1, -1, -1)};
+    }
+
+    public int[][] faceTriangles =
     {
         new int[] { 0,1,2,3 },
         new int[] { 5,0,3,6 },
@@ -25,7 +43,7 @@ public static class CubeMeshData
         new int[] { 3,2,7,6 },
     };
 
-    public static Vector3[] faceVertices(int dir)
+    public Vector3[] faceVertices(int dir)
     {
         Vector3[] fv = new Vector3[4];
         for (int i = 0; i < fv.Length; i++)
