@@ -1440,7 +1440,7 @@ public class OVRManager : MonoBehaviour
 		{
 			try
 			{
-				Debug.Log("[OVRManager] HMDAcquired event");
+				//Debug.Log("[OVRManager] HMDAcquired event");
 				if (HMDAcquired != null)
 					HMDAcquired();
 			}
