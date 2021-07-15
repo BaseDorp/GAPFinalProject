@@ -1,0 +1,33 @@
+{
+    "name": "VRActions",
+    "maps": [
+        {
+            "name": "VRControls",
+            "id": "d84044d1-4d53-429c-8230-f8b4ca1b870d",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "5b4ae1e4-c38a-495d-89e0-73eb36a65157",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "74f1289c-30d2-4a6f-b66a-1be440cd5b89",
+                    "path": "<OculusTouchController>/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
